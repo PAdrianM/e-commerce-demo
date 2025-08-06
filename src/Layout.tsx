@@ -1,4 +1,6 @@
 import './Layout.css';
+import { Outlet } from 'react-router-dom';
+import ThemeToggle from './components/toggle/ThemeToggle';
 
 
 const Layout: React.FC = () => {
@@ -6,9 +8,10 @@ const Layout: React.FC = () => {
         <div className='layout-container'>
             <header>
                 {/* <Navbar /> */}
+                <ThemeToggle />
             </header>
             <main>
-                {/* <Outlet /> */}
+                <Outlet />
             </main>
             {/* <Footer /> */}
         </div>

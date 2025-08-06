@@ -1,0 +1,80 @@
+.glass-card {
+  position: relative;
+  width: 320px;
+  height: 480px;
+  border-radius: 20px;
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s ease;
+}
+
+.glass-card:hover {
+  transform: scale(1.02);
+}
+
+.glass-image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  filter: brightness(0.9);
+}
+
+.glass-content {
+  flex: 1;
+  padding: 1.2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.glass-content h2 {
+  font-size: 1.5rem;
+  margin-bottom: 0.4rem;
+}
+
+.glass-time {
+  font-size: 0.9rem;
+  color: #ddd;
+  margin-bottom: 1rem;
+  display: block;
+}
+
+.glass-content p {
+  font-size: 1rem;
+  line-height: 1.4;
+  flex: 1;
+  margin-bottom: 1rem;
+}
+
+.glass-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* .glass-price {
+  font-weight: bold;
+  font-size: 1.2rem;
+  color: #ffd369;
+}
+
+.glass-button {
+  background: rgba(255, 255, 255, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.glass-button:hover {
+  background: rgba(255, 255, 255, 0.3);
+} */
