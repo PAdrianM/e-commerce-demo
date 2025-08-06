@@ -12,7 +12,7 @@ interface GlassCardProps {
 const GlassCard: React.FC<GlassCardProps> = ({
   title,
   description,
-  price,
+  // price,
   imageUrl,
   time = "25 Mins",
 }) => {
