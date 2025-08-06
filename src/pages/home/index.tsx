@@ -1,5 +1,4 @@
 import GlassCard from "../../components/cards/glass_card/GlassCard";
-import DishCard from "../../components/cards/dish_card/DishCard";
 
 const Home = () => {
   return (
