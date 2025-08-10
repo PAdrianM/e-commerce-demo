@@ -1,0 +1,266 @@
+/* Reset general */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  min-height: 100vh;
+  overflow-x: hidden; /* Evita scroll horizontal */
+}
+
+.layout-container {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* =============================
+   TEMAS
+   ============================= */
+
+/* Tema estándar */
+body.standard-theme {
+  --bg-start: #ffffff;
+  --bg-end: #f9f9f9;
+  --text-color: #333333;
+  --accent-color: #ff7043;
+
+  background: linear-gradient(to bottom, var(--bg-start), var(--bg-end));
+  color: var(--text-color);
+}
+
+/* Tema urbano */
+body.urban-theme {
+  --bg-start: #0a0a0a;
+  --bg-end: #1f1f1f;
+  --text-color: #ffffff;
+  --accent-color: #f4c542;
+
+  background: linear-gradient(to bottom, var(--bg-start), var(--bg-end));
+  color: var(--text-color);
+}
+
+/* Tema formal */
+body.formal-theme {
+  --bg-start: #2c2c2c;
+  --bg-end: #1f1f1f;
+  --text-color: #f8f8f8;
+  --accent-color: #c0a060;
+
+  background: linear-gradient(to bottom, var(--bg-start), var(--bg-end));
+  color: var(--text-color);
+}
+
+/* Tema alegre */
+body.alegre-theme {
+  --bg-start: #ff7043;
+  --bg-end: #ffd54f;
+  --text-color: #ffffff;
+  --accent-color: #ffd54f;
+
+  background: linear-gradient(to bottom, var(--bg-start), var(--bg-end));
+  color: var(--text-color);
+}
+
+/* Fondo con imagen opcional */
+body.bg-image {
+  background-image: url("./assets/img/background/image.png");
+  background-size: cover;
+  background-position: center;
+}
+
+/* ESTILOS DEL NAVEGADOR */
+
+/* =========================================================
+   1️ RESTAURANTE URBANO
+   ========================================================= */
+
+/* Propuesta 1 – Minimal Dark */
+.urban-dark {
+  background-color: #121212;
+  color: #fff;
+}
+.urban-dark .navbar-links a {
+  color: #fff;
+}
+.urban-dark .navbar-links a:hover {
+  color: #f7d774;
+}
+.urban-dark .order-btn {
+  background-color: #f4c542;
+  color: #121212;
+}
+.urban-dark .order-btn:hover {
+  background-color: #f7d774;
+}
+
+/* Propuesta 2 – Urban Gradient */
+.urban-gradient {
+  background: linear-gradient(45deg, #121212, #2e2e2e);
+  color: #fff;
+}
+.urban-gradient .navbar-links a {
+  color: #fff;
+  position: relative;
+}
+.urban-gradient .navbar-links a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -3px;
+  width: 0%;
+  height: 2px;
+  background-color: #f4c542;
+  transition: width 0.3s ease;
+}
+.urban-gradient .navbar-links a:hover::after {
+  width: 100%;
+}
+.urban-gradient .order-btn {
+  background-color: #f4c542;
+  box-shadow: 0 0 10px rgba(244, 197, 66, 0.5);
+}
+.urban-gradient .order-btn:hover {
+  background-color: #f7d774;
+}
+
+/* Propuesta 3 – Iconic Street */
+.urban-iconic {
+  background-color: #000;
+  color: #fff;
+}
+.urban-iconic .navbar-links a {
+  color: #fff;
+}
+.urban-iconic .order-btn {
+  background-color: #f4c542;
+  border-radius: 50px;
+}
+.urban-iconic .order-btn:hover {
+  background-color: #f7d774;
+}
+
+/* =========================================================
+   2 RESTAURANTE ALEGRE
+   ========================================================= */
+
+/* Propuesta 7 – Playful Waves */
+.alegre-waves {
+  background-color: #ff7043;
+  color: #fff;
+  background-image: repeating-linear-gradient(
+    45deg,
+    rgba(255, 255, 255, 0.05) 0,
+    rgba(255, 255, 255, 0.05) 10px,
+    transparent 10px,
+    transparent 20px
+  );
+}
+.alegre-waves .navbar-links a {
+  color: #fff;
+}
+.alegre-waves .navbar-links a:hover {
+  color: #ffd54f;
+}
+.alegre-waves .order-btn {
+  background-color: #ffd54f;
+  color: #ff7043;
+}
+.alegre-waves .order-btn:hover {
+  background-color: #ffecb3;
+}
+
+/* Propuesta 8 – Sunset Delight */
+.alegre-sunset {
+  background: linear-gradient(90deg, #ff7043, #ffcc80);
+  color: #fff;
+}
+.alegre-sunset .navbar-links a {
+  color: #fff;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+}
+.alegre-sunset .order-btn {
+  background-color: #ffd54f;
+  color: #ff7043;
+}
+.alegre-sunset .order-btn:hover {
+  background-color: #fff176;
+}
+
+/* Propuesta 9 – Color Burst */
+.alegre-burst {
+  background-color: #ff7043;
+  color: #fff;
+}
+.alegre-burst .navbar-links a {
+  color: #fff;
+  transition: color 0.4s ease;
+}
+.alegre-burst .navbar-links a:hover {
+  color: #ffd54f;
+}
+.alegre-burst .order-btn {
+  border: 2px solid #ffd54f;
+  background-color: transparent;
+  color: #ffd54f;
+}
+.alegre-burst .order-btn:hover {
+  background-color: #ffd54f;
+  color: #ff7043;
+}
+
+/* =========================================================
+   3 RESTAURANTE NATURAL
+   ========================================================= */
+.natural {
+  background-color: #e0f7fa;
+  color: #00695c;
+}
+.natural .navbar-links a {
+  color: #00695c;
+}
+.natural .navbar-links a:hover {
+  color: #004d40;
+}
+.natural .order-btn {
+  background-color: #004d40;
+  color: #e0f7fa;
+}
+.natural .order-btn:hover {
+  background-color: #00796b;
+}
+
+/* =========================================================
+   4 RESTAURANTE ESTÁNDAR
+   ========================================================= */
+.standard {
+  background-color: #ffffff;
+  color: #333333;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+.standard .navbar-logo {
+  color: #333333;
+}
+.standard .navbar-links a {
+  color: #333333;
+  font-weight: 500;
+}
+.standard .navbar-links a:hover {
+  color: #ff7043;
+}
+.standard .order-btn {
+  background-color: #ff7043;
+  color: #ffffff;
+  border-radius: 4px;
+}
+.standard .order-btn:hover {
+  background-color: #ff8a65;
+}
