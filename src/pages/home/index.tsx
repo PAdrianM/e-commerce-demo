@@ -1,4 +1,4 @@
-import GlassCard from "../../components/cards/glass_card/GlassCard";
+// import GlassCard from "../../components/cards/glass_card/GlassCard";
 import Banner from "../../components/banner/Banner";
 import firstImgBanner from "../../assets/img/banner_images/first_demo_banner.png";
 import secondImgBanner from "../../assets/img/banner_images/second_demo_banner.png";
