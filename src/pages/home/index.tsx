@@ -16,9 +16,9 @@ const Home = () => {
 
       {/* Banner simple */}
       <Banner
-        titleMain="Spicy Chicken"
-        titleSub="Sabor que enamora"
-        restaurantDescription="El mejor pollo frito de la ciudad"
+        titleMain="Restaurant"
+        titleSub="Ecommerce Demo "
+        restaurantDescription="Un producto de tejido digital"
         images={[firstImgBanner, secondImgBanner, thirdImgBanner]}
         onMenuClick={() => console.log("Ir al menú")}
       />
