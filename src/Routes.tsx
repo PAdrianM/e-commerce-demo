@@ -4,8 +4,11 @@ import Home from './pages/home/index';
 import BlankLayout from './BlankLayout';
 
 const Routes = () => {
+    // Use different basename for development vs production
+    const basename = import.meta.env.MODE === 'production' ? '/e-commerce-demo' : '';
+    
     return (
-        <Router>
+        <Router basename={basename}>
             <RouterRoutes>
                 <Route element={<Layout />}>
                     <Route path="/" element={<Home />} />
