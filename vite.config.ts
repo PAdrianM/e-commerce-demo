@@ -2,7 +2,15 @@ import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 
 // https://vite.dev/config/
-export default defineConfig({
-  plugins: [react()],
-  base: '/e-commerce-demo/',
+export default defineConfig(({ command }) => {
+  const config = {
+    plugins: [react()],
+    base: '/',
+  }
+
+  if (command === 'build') {
+    config.base = '/e-commerce-demo/'
+  }
+
+  return config
 })
