@@ -32,6 +32,14 @@ body.standard-theme {
   --bg-end: #f9f9f9;
   --text-color: #333333;
   --accent-color: #ff7043;
+  
+  /* Variables del banner */
+  --banner-btn-bg: #ff7043;
+  --banner-btn-hover: #e65c2d;
+  --banner-text-color: #ffffff;
+  --banner-overlay-bg: rgba(0, 0, 0, 0.45);
+  --banner-dots-color: #ffffff;
+  --banner-dots-active: #ff7043;
 
   background: linear-gradient(to bottom, var(--bg-start), var(--bg-end));
   color: var(--text-color);
@@ -43,6 +51,14 @@ body.urban-theme {
   --bg-end: #1f1f1f;
   --text-color: #ffffff;
   --accent-color: #f4c542;
+  
+  /* Variables del banner */
+  --banner-btn-bg: #f4c542;
+  --banner-btn-hover: #e6b23b;
+  --banner-text-color: #ffffff;
+  --banner-overlay-bg: rgba(15, 15, 15, 0.6);
+  --banner-dots-color: #f4c542;
+  --banner-dots-active: #ffffff;
 
   background: linear-gradient(to bottom, var(--bg-start), var(--bg-end));
   color: var(--text-color);
@@ -54,6 +70,14 @@ body.formal-theme {
   --bg-end: #1f1f1f;
   --text-color: #f8f8f8;
   --accent-color: #c0a060;
+  
+  /* Variables del banner */
+  --banner-btn-bg: #c0a060;
+  --banner-btn-hover: #a8904e;
+  --banner-text-color: #f8f8f8;
+  --banner-overlay-bg: rgba(44, 44, 44, 0.7);
+  --banner-dots-color: #c0a060;
+  --banner-dots-active: #f8f8f8;
 
   background: linear-gradient(to bottom, var(--bg-start), var(--bg-end));
   color: var(--text-color);
@@ -65,6 +89,14 @@ body.alegre-theme {
   --bg-end: #ffd54f;
   --text-color: #ffffff;
   --accent-color: #ffd54f;
+  
+  /* Variables del banner */
+  --banner-btn-bg: #ffd54f;
+  --banner-btn-hover: #ffcc42;
+  --banner-text-color: #333333;
+  --banner-overlay-bg: rgba(255, 112, 67, 0.5);
+  --banner-dots-color: #333333;
+  --banner-dots-active: #ffd54f;
 
   background: linear-gradient(to bottom, var(--bg-start), var(--bg-end));
   color: var(--text-color);

@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import "./Theme.css";
 import { Outlet } from "react-router-dom";
 import Navbar from "./components/navbar/lading_navbar/Navbar";
@@ -10,9 +10,9 @@ interface LayoutProps {
 
 // Mapeo entre tema general y clase navbar
 const themeToNavbarClass: Record<string, string> = {
-  urban: "urban-iconic", // o urban-gradient, urban-iconic
-  alegre: "alegre-waves", // o alegre-sunset, alegre-burst
-  formal: "",
+  urban: "urban-iconic", 
+  alegre: "alegre-waves", 
+  formal: "natural",
   standard: "standard",
 };
 
@@ -20,18 +20,32 @@ const Layout: React.FC<LayoutProps> = ({
   theme = "urban",
   withImage = false,
 }) => {
+  const [currentTheme, setCurrentTheme] = useState(theme);
+
   useEffect(() => {
     document.body.className = ""; // limpiar clases
-    document.body.classList.add(`${theme}-theme`); // agregar tema general
+    document.body.classList.add(`${currentTheme}-theme`); // agregar tema general
     if (withImage) {
       document.body.classList.add("bg-image"); // fondo opcional
     }
-  }, [theme, withImage]);
+  }, [currentTheme, withImage]);
+
+  // Función para cambiar tema dinámicamente
+  const changeTheme = (newTheme: "standard" | "urban" | "formal" | "alegre") => {
+    setCurrentTheme(newTheme);
+  };
 
   return (
     <div className="layout-container">
       <header>
-        <Navbar theme={themeToNavbarClass[theme]} />
+        <Navbar theme={themeToNavbarClass[currentTheme]} />
+        {/* Botones para cambiar tema - solo para demo */}
+        <div style={{ position: 'fixed', top: '10px', right: '10px', zIndex: 1000 }}>
+          <button onClick={() => changeTheme('standard')}>Standard</button>
+          <button onClick={() => changeTheme('urban')}>Urban</button>
+          <button onClick={() => changeTheme('formal')}>Formal</button>
+          <button onClick={() => changeTheme('alegre')}>Alegre</button>
+        </div>
       </header>
       <main>
         <Outlet />
