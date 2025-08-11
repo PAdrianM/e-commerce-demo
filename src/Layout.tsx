@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import "./theme.css";
+import "./Theme.css";
 import { Outlet } from "react-router-dom";
 import Navbar from "./components/navbar/lading_navbar/Navbar";
 
