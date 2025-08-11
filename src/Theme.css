@@ -218,27 +218,6 @@ body.bg-image {
 }
 
 /* =========================================================
-   3 RESTAURANTE NATURAL
-   ========================================================= */
-.natural {
-  background-color: #e0f7fa;
-  color: #00695c;
-}
-.natural .navbar-links a {
-  color: #00695c;
-}
-.natural .navbar-links a:hover {
-  color: #004d40;
-}
-.natural .order-btn {
-  background-color: #004d40;
-  color: #e0f7fa;
-}
-.natural .order-btn:hover {
-  background-color: #00796b;
-}
-
-/* =========================================================
    4 RESTAURANTE ESTÁNDAR
    ========================================================= */
 .standard {

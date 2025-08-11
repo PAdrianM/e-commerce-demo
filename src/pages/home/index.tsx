@@ -1,22 +1,10 @@
 // import GlassCard from "../../components/cards/glass_card/GlassCard";
 import Banner from "../../components/banner/Banner";
 import firstImgBanner from "../../assets/img/banner_images/first_demo_banner.png";
-// import secondImgBanner from "../../assets/img/banner_images/second_demo_banner.png";
-// import thirdImgBanner from "../../assets/img/banner_images/third_demo_banner.png";
+import secondImgBanner from "../../assets/img/banner_images/second_demo_banner.png";
+import thirdImgBanner from "../../assets/img/banner_images/third_demo_banner.png";
 
 const Home = () => {
-  const imagesSingle = [firstImgBanner];
-
-  // const imagesMultiple = [
-  //   firstImgBanner,
-  //   secondImgBanner,
-  //   thirdImgBanner,
-  // ];
-
-  const handleMenuClick = () => {
-    console.log("Menu clicked");
-  };
-
   return (
     <>
       {/* <GlassCard
@@ -28,10 +16,11 @@ const Home = () => {
 
       {/* Banner simple */}
       <Banner
-        titleMain="Our New"
-        titleSub="Restaurant"
-        images={imagesSingle}
-        onMenuClick={handleMenuClick}
+        titleMain="Spicy Chicken"
+        titleSub="Sabor que enamora"
+        restaurantDescription="El mejor pollo frito de la ciudad"
+        images={[firstImgBanner, secondImgBanner, thirdImgBanner]}
+        onMenuClick={() => console.log("Ir al menú")}
       />
 
       {/* Banner con carousel */}

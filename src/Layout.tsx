@@ -12,7 +12,7 @@ interface LayoutProps {
 const themeToNavbarClass: Record<string, string> = {
   urban: "urban-iconic", // o urban-gradient, urban-iconic
   alegre: "alegre-waves", // o alegre-sunset, alegre-burst
-  formal: "natural",
+  formal: "",
   standard: "standard",
 };
 
