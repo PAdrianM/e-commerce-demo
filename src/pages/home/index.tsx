@@ -16,8 +16,8 @@ const Home = () => {
 
       {/* Banner simple */}
       <Banner
-        titleMain="Restaurant"
-        titleSub="Ecommerce Demo "
+        titleMain="RESTAURANT"
+        titleSub="DEMO"
         restaurantDescription="Un producto de tejido digital"
         images={[firstImgBanner, secondImgBanner, thirdImgBanner]}
         onMenuClick={() => console.log("Ir al menú")}

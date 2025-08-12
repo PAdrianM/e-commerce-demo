@@ -1,3 +1,6 @@
+/* Importar desde Google Fonts - DEBE IR PRIMERO */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&family=Merriweather:wght@700&family=Montserrat:wght@400;700&family=Bebas+Neue&family=Playfair+Display:wght@700&family=Lora:wght@400;500&family=Poppins:wght@400;600&family=Fredoka+One&display=swap');
+
 /* Reset general */
 *,
 *::before,
@@ -20,6 +23,31 @@ body,
   min-height: 100vh;
   display: flex;
   flex-direction: column;
+}
+
+/* Tema estándar */
+body.standard-theme {
+  --font-family: 'Roboto', sans-serif;
+}
+
+/* Tema urbano */
+body.urban-theme {
+  --font-family: 'Montserrat', sans-serif;
+}
+
+/* Tema formal */
+body.formal-theme {
+  --font-family: 'Lora', serif;
+}
+
+/* Tema alegre */
+body.alegre-theme {
+  --font-family: 'Fredoka One', cursive;
+}
+
+/* Aplicar fuente global por tema */
+body {
+  font-family: var(--font-family);
 }
 
 /* =============================

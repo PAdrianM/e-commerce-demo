@@ -60,6 +60,7 @@ const sliderSettings = {
                 <button className="banner-btn" onClick={onMenuClick}>
                   Ver Menú
                 </button>
+                <button className="banner-btn-floating">Ver Menú</button>
               </div>
             </div>
           </div>
