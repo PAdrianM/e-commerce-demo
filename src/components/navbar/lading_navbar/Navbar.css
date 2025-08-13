@@ -53,11 +53,38 @@
 /* ICONO HAMBURGUESA */
 .navbar-toggle {
   display: none;
-  font-size: 1.8rem;
   cursor: pointer;
   background: none;
   border: none;
   color: inherit;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  width: 24px;
+  height: 20px;
+  padding: 0;
+}
+
+/* Líneas del menú hamburguesa */
+.line {
+  display: block;
+  height: 3px;
+  background-color: currentColor;
+  margin: 2px 0;
+  transition: all 0.3s ease;
+  border-radius: 1px;
+}
+
+.line-1 {
+  width: 24px; /* Línea más larga */
+}
+
+.line-2 {
+  width: 20px; /* Línea mediana */
+}
+
+.line-3 {
+  width: 16px; /* Línea más corta */
 }
 
 /* RESPONSIVE: Móvil */
@@ -69,7 +96,7 @@
 
   /* Hamburguesa izquierda */
   .navbar-toggle {
-    display: block;
+    display: flex;
     position: absolute;
     left: 1rem;
     top: 50%;

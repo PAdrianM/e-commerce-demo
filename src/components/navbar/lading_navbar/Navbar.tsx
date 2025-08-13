@@ -7,18 +7,18 @@ interface NavbarProps {
 }
 
 const Navbar: React.FC<NavbarProps> = ({ theme = "standard" }) => {
-  const [isMobile, setIsMobile] = useState(window.innerWidth <= 768); // Cambiado a <=
+  const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
   const [menuOpen, setMenuOpen] = useState(false);
   const menuRef = useRef<HTMLUListElement>(null);
   const toggleRef = useRef<HTMLButtonElement>(null);
 
   useEffect(() => {
     const handleResize = () => {
-      const mobile = window.innerWidth <= 768; // Cambiado a <=
+      const mobile = window.innerWidth <= 768; // Cambiado a <= para incluir pantallas pequeñas
       setIsMobile(mobile);
       if (!mobile) setMenuOpen(false);
     };
-    
+
     const handleClickOutside = (event: MouseEvent) => {
       if (
         menuOpen &&
@@ -41,18 +41,18 @@ const Navbar: React.FC<NavbarProps> = ({ theme = "standard" }) => {
     document.addEventListener("mousedown", handleClickOutside);
 
     // Agregar event listeners a los links del menú
-    const menuLinks = menuRef.current?.querySelectorAll('a');
-    menuLinks?.forEach(link => {
-      link.addEventListener('click', handleLinkClick);
+    const menuLinks = menuRef.current?.querySelectorAll("a");
+    menuLinks?.forEach((link) => {
+      link.addEventListener("click", handleLinkClick);
     });
 
     return () => {
       window.removeEventListener("resize", handleResize);
       document.removeEventListener("mousedown", handleClickOutside);
-      
+
       // Limpiar event listeners de los links
-      menuLinks?.forEach(link => {
-        link.removeEventListener('click', handleLinkClick);
+      menuLinks?.forEach((link) => {
+        link.removeEventListener("click", handleLinkClick);
       });
     };
   }, [menuOpen, isMobile]);
@@ -61,25 +61,24 @@ const Navbar: React.FC<NavbarProps> = ({ theme = "standard" }) => {
 
   return (
     <nav className={`navbar ${theme}`}>
-      <button 
+      <button
         ref={toggleRef}
-        className="navbar-toggle" 
-        onClick={toggleMenu} 
+        className="navbar-toggle"
+        onClick={toggleMenu}
         aria-label="Menu"
         aria-expanded={menuOpen}
       >
-        ☰
+        <span className="line line-1"></span>
+        <span className="line line-2"></span>
+        <span className="line line-3"></span>
       </button>
-      
+
       <div className="navbar-logo">
         <span className="logo-primari-text">🍽</span>
         <span className="logo-secundari-text">Logo</span>
       </div>
-      
-      <ul 
-        ref={menuRef}
-        className={`navbar-links ${menuOpen ? "active" : ""}`}
-      >
+
+      <ul ref={menuRef} className={`navbar-links ${menuOpen ? "active" : ""}`}>
         <li>
           <Link to="/">Home</Link>
         </li>
@@ -96,7 +95,7 @@ const Navbar: React.FC<NavbarProps> = ({ theme = "standard" }) => {
           <a href="#contact">Contact Us</a>
         </li>
       </ul>
-      
+
       <button className="order-btn">Ordenar Ya</button>
     </nav>
   );
