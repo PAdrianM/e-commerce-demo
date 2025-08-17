@@ -1,0 +1,61 @@
+/* Base común para todas las cards */
+.top-dish-card {
+  background: var(--card-bg, #fff);
+  color: var(--card-text-color, #000);
+  border-radius: var(--card-radius, 16px);
+  box-shadow: var(--card-shadow, 0 2px 8px rgba(0, 0, 0, 0.1));
+  overflow: hidden;
+  transition: transform 0.2s ease;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  width: 280px;
+}
+
+.top-dish-card:hover {
+  transform: scale(1.03);
+}
+
+.dish-image {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  /* background: transparent !important;
+  background-color: transparent; */
+}
+
+.dish-content {
+  padding: 16px;
+}
+
+.dish-title {
+  font-size: 1.25rem;
+  margin: 0;
+}
+
+.dish-description {
+  font-size: 0.9rem;
+  margin: 8px 0;
+}
+
+.dish-price {
+  font-weight: bold;
+  color: var(--accent-color, #ff7043);
+}
+
+/* Responsive: vista móvil / tablet */
+@media (max-width: 768px) {
+  .top-dish-card {
+    width: 100%;
+    max-width: calc(100% - 32px); /* ancho total menos márgenes */
+    margin: 0 auto 16px auto;     /* centrada y separada abajo */
+    border-radius: 16px;          /* borde redondeado */
+  }
+
+  .dish-image {
+    height: auto;                 /* altura flexible */
+    max-height: 220px;             /* opcional, para limitar altura */
+    border-top-left-radius: 16px;
+    border-top-right-radius: 16px;
+  }
+}
